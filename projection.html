@@ -24,7 +24,7 @@
         <!-- Header -->
         <header id="header">
             <h1>3D Projection</h1>
-            <p>Simulate how 3D models projected on 2D plane through a camera's lens</p>
+            <p>Simulate how 3D models are projected on a view-plane through a camera's lens</p>
         </header>
 
         <!-- Main -->
@@ -33,35 +33,29 @@
             <!-- Content -->
             <section id="content" class="main">
 
-                <div>
+                <div style="margin-bottom: 2em;">
                     <span class="image left"><img src="images/projectionlivedemo.png" alt="" /></span>
                     <h2> Description</h2>
-                    <p>Fringilla nisl.
-                    Doneaccumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante
-                    ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
-                    accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus
-                    euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
-                    iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec
-                    accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante
-                  
-                </p>
-            </div>
-                <span>
-                    <h2>Sample Code for 3D Transformation</h2>
-                    <a href="https://tienkimnguyen.github.io/cg-3dprojections/" 
-                        target="_blank" 
-                        style="margin-bottom:1em; margin-right: 1rem;"
-                        class="button">Live
+                    <p>
+                        Implement 3D line drawing by projecting models onto the view-plane using HTML's Canvas 2D API.
+                        <br>
+                        In other words, this simulates how a camera views 3D models and projects it on a picture.
+                        In addition to the basic projection, it also adds a rotation animation to each model with
+                        defined
+                        speed in revolutions per second.
+                    </p>
+                    <a href="https://tienkimnguyen.github.io/cg-3dprojections/" target="_blank"
+                        style="margin-bottom:1em; margin-right: 1rem;" class="button">Live
                         Demo
                     </a>
-                    <a href="https://github.com/TienKimNguyen/cg-3dprojections" 
-                        target="_blank" 
-                        class="button"  
+                    <a href="https://github.com/TienKimNguyen/cg-3dprojections" target="_blank" class="button"
                         style="margin-bottom:1rem;">Source
                         Code
                     </a>
+                </div>
 
-                </span>
+                <h2>Sample Code for 3D Transformation</h2>
+
                 <pre><code>// create a 4x4 matrix to the parallel projection / view matrix
 function mat4x4Parallel(prp, srp, vup, clip) {
     // clip: L, R, B, T, N, F
