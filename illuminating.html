@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>AI in Criminal Justice</title>
+    <title>3D Illumination & Shading</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -23,49 +23,90 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-        <h1>AI in Criminal Justice</h1>
-        <p>How does AI affect the criminal justice system?</p>
+        <h1>3D Illumination & Shading</h1>
+        <p>Illumination of multiple light sources on 3D models</p>
       </header>
 
       <!-- Main -->
       <div id="main">
         <!-- Content -->
         <section id="content" class="main">
-          <span class="image main"
-            ><img src="images/aicriminal.jpeg" alt=""
-          /></span>
+          <div style="margin-bottom: 2.5em">
+            <span class="image left"
+              ><img src="images/illuminating.png" alt=""
+            /></span>
+            <h2>Description</h2>
+            <p>
+              Using HTML WebGL2 API to demonstrate how mulitple point-light
+              sources illuminate 3D models in world space. This project
+              implements texture mapping to each model by applying some pictures
+              on them. It also allows the users to adjust the properties of each
+              point light and see how they work in different shaders (gouraud
+              vs. phong)
+            </p>
+            <a
+              href="https://tienkimnguyen.github.io/cg-illuminationshading/"
+              target="_blank"
+              style="margin-bottom: 1em; margin-right: 1rem"
+              class="button"
+            >
+              Live Demo
+            </a>
+            <a
+              href="https://github.com/TienKimNguyen/cg-illuminationshading"
+              target="_blank"
+              class="button"
+              style="margin-bottom: 1rem"
+            >
+              Source Code
+            </a>
+          </div>
 
-          <h2>Description</h2>
-          <p>
-            Our modern world witnesses the fantastic development of Artificial
-            Intelligence (AI). AI has been implemented in every aspect of sector
-            of society. It opens many great advantages and potentials for out
-            lives. However, AI systems also mirror unintended bias and
-            discrimination existing in society. This entails some unwanted
-            consequences, especially in the legal system where we desire
-            justice.
-            <br />
-            The paper focuses on analyzing AI's use in the criminal justice
-            system and its ethics concerns. It also proposes some ways that
-            government, organizations, and researchers can take to mitigate bias
-            in AI software.
-          </p>
-          <p>
-            This paper addresses an important issue that happens everywhere in
-            society: bias and discrimination. Although we are developing
-            sophisticated and state-of-the-art techonolgy, they tend to
-            exacerbate existing societal issues. This is also out concern in
-            developing a class scheduling tool in the Senior Capstone course.
-            Understanding unintended consequences due to biased development that
-            may appear in our application helps us navigate toward better
-            solutions in advance.
-          </p>
-          <a
-            href="files/Summa Research Paper.pdf"
-            target="_blank"
-            class="button"
-            >Read More</a
-          >
+          <h2>Sample Code for Phong Shading</h2>
+
+          <pre><code>#version 300 es
+
+precision mediump float;
+
+in vec3 frag_pos;
+in vec3 frag_normal;
+in vec2 frag_texcoord;
+
+uniform vec3 light_ambient;
+uniform vec3 light_position[10];
+uniform vec3 light_color[10];
+uniform vec3 camera_position;
+uniform vec3 material_color;      // Ka and Kd
+uniform vec3 material_specular;   // Ks
+uniform float material_shininess; // n
+uniform sampler2D image;          // use in conjunction with Ka and Kd
+
+out vec4 FragColor;
+
+void main() {
+    vec3 total_light = vec3(0);
+    vec3 texcolor = vec3(texture(image, frag_texcoord));
+    vec3 N = normalize(frag_normal);
+
+    for (int i = 0; i < 10; i++) {
+        vec3 L = normalize(light_position[i] - frag_pos); // Light direction
+
+        // Ambient
+        vec3 ambient = light_ambient * material_color;
+
+        // Diffuse
+        vec3 diffuse = light_ambient * material_color * max(dot(N,L), 0.0);
+        
+        // Specular
+        vec3 reflection_light = normalize(2.0 * max(dot(N, L), 0.0) * N - L);
+        vec3 view_direction = normalize (camera_position - frag_pos);
+        vec3 specular = light_ambient * material_specular * pow (max(dot(reflection_light, view_direction), 0.0), material_shininess);
+        
+        vec3 intensity = (ambient + diffuse) * texcolor + specular;
+        total_light += light_color[i] * intensity;
+    }
+    FragColor = vec4(total_light, 1.0);
+}</code></pre>
         </section>
       </div>
 

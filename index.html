@@ -1,95 +1,105 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Tien Nguyen</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+  </head>
 
-<head>
-	<title>Tien Nguyen</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-</head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <span class="logo"><img src="images/logo.svg" alt="" /></span>
+        <h1>Hi, I'm Tien.</h1>
+        <p>Computer Science and Software Engineering</p>
+      </header>
 
-<body class="is-preload">
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="#intro" class="active">About me</a></li>
+          <li><a href="#first">Projects</a></li>
+          <!-- <li><a href="#second">Second Section</a></li> -->
+          <li><a href="#cta">Resume</a></li>
+        </ul>
+      </nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <!-- About me -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <header class="major">
+                <h2>About me</h2>
+              </header>
+              <p>
+                My name is Tien (Kim) Nguyen. I'm an aspiring Computer Science
+                senior at the University of Saint Thomas (MN). I'm excited to
+                graduate in May 2022 and enter a master's program in Software
+                Engineering next semester. Check out my e-porfolio to see some
+                of my works and projects!
+              </p>
+              <ul class="actions">
+                <li><a href="bio.html" class="button">Intro Video</a></li>
+              </ul>
+            </div>
+            <span class="image"><img src="images/profile.jpg" alt="" /></span>
+          </div>
+        </section>
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<span class="logo"><img src="images/logo.svg" alt="" /></span>
-			<h1>Hi, I'm Tien.</h1>
-			<p>Computer Science and Software Engineering</p>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul>
-				<li><a href="#intro" class="active">About me</a></li>
-				<li><a href="#first">Projects</a></li>
-				<!-- <li><a href="#second">Second Section</a></li> -->
-				<li><a href="#cta">Resume</a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- About me -->
-			<section id="intro" class="main">
-				<div class="spotlight">
-					<div class="content">
-						<header class="major">
-							<h2>About me</h2>
-						</header>
-						<p>My name is Tien (Kim) Nguyen. I'm an aspiring Computer Science senior at the
-							University of Saint Thomas (MN). I'm excited to graduate in May 2022 and enter a master's
-							program in Software Engineering next semester.
-							Check out my e-porfolio to see some of my works and projects!
-						</p>
-						<ul class="actions">
-							<li><a href="bio.html" class="button">Intro Video</a></li>
-						</ul>
-					</div>
-					<span class="image"><img src="images/profile.jpg" alt="" /></span>
-				</div>
-			</section>
-
-			<!-- Projects -->
-			<section id="first" class="main special">
-				<header class="major">
-					<h2>Projects</h2>
-				</header>
-				<ul class="features">
-					<li>
-						<span class="icon solid major style1 fa-drafting-compass"></span>
-						<h3>2D Drawing</h3>
-						<p>Use line drawing to create a slide show of shapes and curves using HTML's Canvas 2D API.</p>
-						<a href="shapedrawing.html" class="button">Learn More</a>
-					</li>
-					<li>
-						<span class="icon solid major style3 fa-cube"></span>
-						<h3>3D Projection</h3>
-						<p>Implement 3D line drawing by projecting models onto the view-plane using HTML's Canvas 2D API.</p>
-						<a href="projection.html" class="button">Learn More</a>
-					</li>
-					<li>
-						<span class="icon solid major style5 fa-balance-scale"></span>
-						<h3>AI in Criminal Justice</h3>
-						<p>The research paper gives an overview about Artificial Intelligence and its use in the Criminal Justice system.</p>
-						<a href="aicriminal.html" class="button">Learn More</a>
-					</li>
-				</ul>
-				<!-- <footer class="major">
+        <!-- Projects -->
+        <section id="first" class="main special">
+          <header class="major">
+            <h2>Projects</h2>
+          </header>
+          <ul class="features">
+            <li>
+              <span class="icon solid major style1 fa-lightbulb"></span>
+              <h3>3D Illumination & Shading</h3>
+              <p>
+                Utilize HTML WebGL2 to demonstrate how the lights illuminate 3D
+                objects in world space.
+              </p>
+              <a href="illuminating.html" class="button">Learn More</a>
+            </li>
+            <li>
+              <span class="icon solid major style3 fa-cube"></span>
+              <h3>3D Projection</h3>
+              <p>
+                Implement 3D line drawing by projecting models onto the
+                view-plane using HTML's Canvas 2D API.
+              </p>
+              <a href="projection.html" class="button">Learn More</a>
+            </li>
+            <li>
+              <span class="icon solid major style5 fa-balance-scale"></span>
+              <h3>AI in Criminal Justice</h3>
+              <p>
+                The research paper gives an overview about Artificial
+                Intelligence and its use in the Criminal Justice system.
+              </p>
+              <a href="aicriminal.html" class="button">Learn More</a>
+            </li>
+          </ul>
+          <!-- <footer class="major">
 					<ul class="actions special">
 						<li><a href="elements.html" class="button">Learn More</a></li>
 					</ul>
 				</footer> -->
-			</section>
+        </section>
 
-			<!-- Second Section -->
-			<!-- <section id="second" class="main special">
+        <!-- Second Section -->
+        <!-- <section id="second" class="main special">
 				<header class="major">
 					<h2>Ipsum consequat</h2>
 					<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
@@ -131,67 +141,95 @@
 				</footer>
 			</section> -->
 
-			<!-- Resume -->
-			<section id="cta" class="main special">
-				<header class="major">
-					<h2>My Resume</h2>
-					<p>Click the button below to view my full resume.</p>
-				</header>
-				<footer class="major">
-					<ul class="actions special">
-						<li><a href="files/Tien Nguyen - Resume.pdf" target="_blank" class="button primary">View</a>
-						</li>
-					</ul>
-				</footer>
-			</section>
+        <!-- Resume -->
+        <section id="cta" class="main special">
+          <header class="major">
+            <h2>My Resume</h2>
+            <p>Click the button below to view my full resume.</p>
+          </header>
+          <footer class="major">
+            <ul class="actions special">
+              <li>
+                <a
+                  href="files/Tien Nguyen - Resume.pdf"
+                  target="_blank"
+                  class="button primary"
+                >
+                  View
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </section>
+      </div>
 
-		</div>
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Mission & Goals</h2>
+          <p>
+            Bias, discrimination, and gender gaps are still present in STEM.
+            Thus, I strongly advocate for equity in all sectors of society.
+            Starting with education, my field of study, Computer Science. Learn
+            more about my message and future goals.
+          </p>
+          <ul class="actions">
+            <li><a href="elements.html" class="button">Learn More</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <dl class="alt">
+            <dt>Address</dt>
+            <dd>5931 Hobe Lane &bull; St. Paul, MN 55110 &bull; USA</dd>
+            <dt>Phone</dt>
+            <dd>(651) 348-9438</dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:ktngn@yahoo.com">ktngn@yahoo.com</a></dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/tien-kim-nguyen/"
+                target="_blank"
+                class="icon brands fa-linkedin alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f alt"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/TienKimNguyen"
+                target="_blank"
+                class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
+          </ul>
+        </section>
+        <p class="copyright">
+          Copyright &copy; 2022 Tien Nguyen. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<section>
-				<h2>Aliquam sed mauris</h2>
-				<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam
-					dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat
-					egestas velit, vitae tincidunt odio.</p>
-				<ul class="actions">
-					<li><a href="elements.html" class="button">Learn More</a></li>
-				</ul>
-			</section>
-			<section>
-				<h2>Contact</h2>
-				<dl class="alt">
-					<dt>Address</dt>
-					<dd>5931 Hobe Lane &bull; St. Paul, MN 55110 &bull; USA</dd>
-					<dt>Phone</dt>
-					<dd>(651) 348-9438</dd>
-					<dt>Email</dt>
-					<dd><a href="mailto:ktngn@yahoo.com">ktngn@yahoo.com</a></dd>
-				</dl>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/tien-kim-nguyen/" target="_blank"
-							class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-					<li><a href="https://github.com/TienKimNguyen" target="_blank"
-							class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-					<!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
-				</ul>
-			</section>
-			<p class="copyright">Copyright &copy; 2022 Tien Nguyen. All Rights Reserved.</p>
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
