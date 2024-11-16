@@ -161,7 +161,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: inherit;
 	}
 
@@ -2255,6 +2255,10 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.free:before {
+			font-family: 'Font Awesome 5 Free';
+		}
+
 		.icon.major {
 			border: solid 1px;
 			display: inline-block;
@@ -2636,6 +2640,16 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	section.special h4 {
+		font-weight: 400;
+		margin: 0;
+	}
+
+	section.special h4:hover {
+		/* text-decoration: underline; */
+		font-weight: 600;
+	}
+
 	header.major {
 		margin-bottom: 3em;
 	}
@@ -2979,8 +2993,27 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		margin: 0 0 2em 0;
+		margin: 0 0 0em 0;
 	}
+		.spotlight .personal{
+			text-align: center;
+			margin-right: 4em;
+		}
+		.spotlight .personal ul{
+			margin-bottom: 0.75em;
+		}
+
+		.spotlight .content {
+			-moz-flex: 2;
+			-webkit-flex: 2;
+			-ms-flex: 2;
+			flex: 2;
+			/* text-align: left; */
+		}
+			.spotlight .personal h1{
+				margin-bottom: 0.25em;
+			}
+
 
 		.spotlight .content {
 			-moz-flex: 1;
@@ -2990,25 +3023,34 @@ input, select, textarea {
 		}
 
 			.spotlight .content > :last-child {
-				margin-bottom: 0;
+				margin-bottom: 2em;
 			}
 
 			.spotlight .content header.major {
 				margin: 0 0 2em 0;
 			}
 
+			.spotlight .content a {
+				color: #630031;
+			}
+
+			.spotlight .content a:hover {
+				font-weight: 400;
+			}
+
 		.spotlight .image {
 			display: inline-block;
-			margin-left: 4em;
+			/* margin-right: 4em; */
 			padding: 0.65em;
 			border-radius: 100%;
 			border: solid 1px;
+			margin-bottom: 1em;
 		}
 
 			.spotlight .image img {
 				display: block;
 				border-radius: 100%;
-				width: 16em;
+				width: 12em;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3020,6 +3062,28 @@ input, select, textarea {
 				flex-direction: column-reverse;
 				text-align: center;
 			}
+				.spotlight .personal {
+					-moz-flex: 0 1 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 2em;
+				}
+
+					.spotlight .personal header.major h1:after {
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					.spotlight .personal .actions {
+						-moz-justify-content: center;
+						-webkit-justify-content: center;
+						-ms-justify-content: center;
+						justify-content: center;
+						width: calc(100% + 1em);
+					}
 
 				.spotlight .content {
 					-moz-flex: 0 1 auto;
@@ -3027,6 +3091,7 @@ input, select, textarea {
 					-ms-flex: 0 1 auto;
 					flex: 0 1 auto;
 					width: 100%;
+					order: -1;
 				}
 
 					.spotlight .content header.major h2:after {
@@ -3048,7 +3113,7 @@ input, select, textarea {
 					-ms-flex: 0 1 auto;
 					flex: 0 1 auto;
 					margin-left: 0;
-					margin-bottom: 2em;
+					margin-bottom: 0.75em;
 				}
 
 		}
@@ -3060,7 +3125,7 @@ input, select, textarea {
 			}
 
 				.spotlight .image img {
-					width: 12em;
+					width: 10em;
 				}
 
 		}
@@ -3123,6 +3188,32 @@ input, select, textarea {
 					margin: 0 auto;
 					max-width: 75%;
 				}
+
+			#header.alt .image {
+				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
+				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
+				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
+				transition: opacity 1.25s ease, transform 0.5s ease;
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-ms-transition-delay: 0s;
+				transition-delay: 0s;
+				/* display: block; */
+				margin: 0 0 1em 0;
+				padding: 0.65em;
+				border-radius: 100%;
+				border: solid 1px;
+				width: 10em;
+				height: 10em;
+			}
+
+				#header.alt .image img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+					border-radius: 50%;
+				}	
+			
 
 		@media screen and (max-width: 1280px) {
 
@@ -3258,7 +3349,7 @@ input, select, textarea {
 		}
 
 		#nav + #main {
-			padding-top: 4.25em;
+			padding-top: 3.25em;
 		}
 
 		#nav ul {
@@ -3331,12 +3422,152 @@ input, select, textarea {
 
 		}
 
+	.navmobile {
+		top: 0;
+		background-color: #ffffff;
+		color: #636363;
+		padding: 15px;
+		/* display: flex; */
+		align-items: center;
+		justify-content: space-between;
+		position:fixed;
+		display: none;
+		cursor: default;
+		text-align: center;
+		border-top-left-radius: 0.25em;
+		border-top-right-radius: 0.25em;
+		width: 64em; /* Keep this */
+    	max-width: calc(100% - 4em);
+		z-index: 1;
+		height: 50px;
+		border-bottom: #dddddd 1px solid;
+		left: 50%; /* Add this */
+		transform: translateX(-50%); /* Add this */
+    }
+
+	.navmobile.alt {
+		background: rgba(255, 255, 255, 0.95);
+    	box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.075);
+	}
+
+    .navmobile .brand-name {
+      font-size: 18px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #636363;
+    }
+
+    /* Styling for the toggle icon */
+    .navmobile .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: #636363;
+    }
+
+    /* Container for the menu */
+    .navmobile .menu-container {
+		display: none; /* Initially hidden */
+		background-color: #ffffff;
+		padding: 10px;
+		z-index: 1031 !important;
+		position: absolute;
+		left: 0;
+		top: 50px;
+		width: 100%;
+		max-width: 100%;
+		overflow: hidden; /* Prevent content overflow */
+		height: 0; /* Start with height 0 to hide it */
+		opacity: 0; /* Start with opacity 0 */
+    }
+
+    /* Display the menu container when it has the 'active' class */
+    .navmobile .menu-container.active {
+		height: auto; /* Let the menu expand vertically */
+		opacity: 1; /* Make the menu visible */
+		display: block;
+    }
+
+    /* Menu list styling */
+    .navmobile .menu-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navmobile .menu-container ul li {
+		list-style: none;;
+        padding: 10px 0;
+    }
+
+	.navmobile .menu-container ul li:hover {
+		background-color: rgba(222, 222, 222, 0.25);
+		font-weight: bold;
+	}
+
+    .navmobile .menu-container ul li a {
+		transition: font-weight 0.3s ease;
+		text-decoration: none !important;
+		color: #636363;
+		text-decoration: none;
+		font-size: 18px;
+		outline: none;
+		border-bottom: none;
+    }
+
+	/* .navmobile .menu-container ul li a:hover {
+		font-weight: bold;
+	} */
+
+	.navmobile .menu-container ul li a:active, a:focus {
+		outline: none !important;
+	}
+
+	.navmobile h2 {
+		color: #636363;
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 736px) {
+		.navmobile {
+			display: flex;
+		}
+	}
+
+	/* Update media queries to match wrapper's responsive behavior */
+	@media screen and (max-width: 480px) {
+		.navmobile {
+			max-width: calc(100% - 2em);
+		}
+	}
+
+	@media screen and (max-width: 360px) {
+		.navmobile {
+			max-width: 100%;
+			border-radius: 0;
+		}
+	}
+
+	@media screen and (max-width: 200px) {
+		.navmobile {
+			max-width: 100%;
+			border-radius: 0;
+		}
+
+		.navmobile .brand-name {
+			display: none;
+		}
+	}
+
+
+
 /* Main */
 
 	#main {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		padding-top: 3.25em;
 	}
 
 		#main input, #main select, #main textarea {
@@ -3581,7 +3812,7 @@ input, select, textarea {
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
+			padding: 3em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
 		}
 
@@ -3621,7 +3852,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main > .main {
-				padding: 4em 3em 2em 3em ;
+				padding: 2em 3em 2em 3em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3632,6 +3863,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+
+			#main {
+				padding-top: 1em;
+			}
 
 			#main > .main {
 				padding: 3em 2em 1em 2em ;
@@ -3645,6 +3880,9 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 480px) {
+			#main {
+				padding-top: 1em;
+			}
 
 			#main > .main {
 				padding: 3em 1.5em 1em 1.5em ;
@@ -3658,8 +3896,8 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 360px) {
-
 			#main {
+				padding-top: 1em;
 				border-radius: 0;
 			}
 
@@ -3679,6 +3917,8 @@ input, select, textarea {
 
 		}
 
+
+		
 /* Footer */
 
 	#footer {
@@ -3766,12 +4006,15 @@ input, select, textarea {
 		width: 64em;
 		max-width: calc(100% - 4em);
 		margin: 0 auto;
+		/* margin-top: 3.25em;
+		margin-bottom: 3.25em; */
 	}
 
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
 				max-width: calc(100% - 2em);
+				/* margin-top: 0em; */
 			}
 
 		}

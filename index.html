@@ -16,49 +16,200 @@
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Header -->
-      <header id="header" class="alt">
-        <span class="logo"><img src="images/logo.svg" alt="" /></span>
-        <h1>Hi, I'm Tien.</h1>
-        <p>Ph.D. student, Virginia Tech</p>
-      </header>
+      <!-- <header id="header" class="alt">
+        <span class="image"><img src="images/profile.jpg" alt="" /></span>
+        <h1>Tien Nguyen</h1>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/tien-kim-nguyen/"
+              target="_blank"
+              class="icon brands fa-linkedin alt"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/TienKimNguyen"
+              target="_blank"
+              class="icon brands fa-github alt"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:tiennguyen@vt.edu"
+              target="_blank"
+              class="icon free fa-envelope alt"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+        </ul>
+      </header> -->
 
       <!-- Nav -->
       <nav id="nav">
         <ul>
-          <li><a href="#intro" class="active">About me</a></li>
-          <li><a href="#first">Projects</a></li>
-          <!-- <li><a href="#second">Second Section</a></li> -->
+          <li><a href="#intro" class="active">
+            <span>About</span></a></li>
+          <li><a href="#first">Publications</a></li>
+          <li><a href="#second">Education</a></li>
+          <li><a href="#third">Experience</a></li>
           <li><a href="#cta">Resume</a></li>
         </ul>
+      </nav>
+
+      <nav class="navmobile"> 
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <span style="font-weight: 400;" class="brand-name">
+          Tien Nguyen
+        </span>
+        <span class="menu-container" id="menuContainer">
+          <ul>
+            <li><a href="#intro">About</a></li>
+            <li><a href="#first">Publications</a></li>
+            <li><a href="#second">Education</a></li>
+            <li><a href="#third">Experience</a></li>
+            <li><a href="#cta">Resume</a></li>
+          </ul>
+        </span>
       </nav>
 
       <!-- Main -->
       <div id="main">
         <!-- About me -->
+
+        <!-- About me -->
         <section id="intro" class="main">
           <div class="spotlight">
+            <!-- <span class="image">
+              <img src="images/profile.jpg" alt="" />
+            </span> -->
+            <div class="personal">
+              <span class="image"><img src="images/profile.jpg" alt="" /></span>
+              <h1>Tien Nguyen</h1>
+              <ul class="icons">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/tien-kim-nguyen/"
+                    target="_blank"
+                    class="icon brands fa-linkedin alt"
+                    ><span class="label">LinkedIn</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/TienKimNguyen"
+                    target="_blank"
+                    class="icon brands fa-github alt"
+                    ><span class="label">GitHub</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:tiennguyen@vt.edu"
+                    target="_blank"
+                    class="icon free fa-envelope alt"
+                    ><span class="label">Mail</span></a
+                  >
+                </li>
+              </ul>
+
+            </div>
             <div class="content">
               <header class="major">
-                <h2>About me</h2>
+                <h2>About</h2>
               </header>
               <p>
-                My name is Tien (Kim) Nguyen. I'm an aspiring second-year Ph.D.
-                student in Computer Science at Virginia Tech under the advise of
-                Dr. Muhammad Ali Gulzar, on Software Engineering in
-                Emerging Domains. Check out my e-porfolio to see some of my
-                works and projects!
+                I am a second-year Ph.D. student in Computer Science at Virginia Tech under the advise of
+                <a href="https://people.cs.vt.edu/~gulzar/" target="_blank">Dr. Muhammad Ali Gulzar</a>. My research focuses 
+                on Software Engineering in Emerging Domains.
               </p>
-              <!-- <ul class="actions">
-                <li><a href="bio.html" class="button">Intro Video</a></li>
-              </ul> -->
             </div>
-            <span class="image"><img src="images/profile.jpg" alt="" /></span>
+            
           </div>
         </section>
+        
+        <section id="first" class="main special">
+            <div class="content">
+              <header class="major">
+                <h2>Publications</h2>
+              </header>
+              <p>
+                None
+              </p>
+            </div>    
+        </section>
+
+        <section id="second" class="main special">
+            <div class="content">
+              <header class="major">
+                <h2>Education</h2>
+              </header>
+
+              <span>
+                <h4>
+                  <a href="https://vt.edu/" target="_blank">Virginia Tech</a>
+                </h4>
+                <p>
+                  Ph.D. in Computer Science<br>
+                  August 2023 - Present
+                </p>
+              </span>
+          
+              <span>
+                <h4>
+                  <a href="https://www.stthomas.edu/" target="_blank">University of St. Thomas</a>
+                </h4>
+                <p>
+                  Bachelor in Computer Science<br>
+                  August 2020 - May 2022
+                </p>
+              </span>
+
+              <span>
+                <h4>
+                  <a href="https://www.century.edu/" target="_blank">Century College</a>
+                </h4>
+                <p>
+                  Associate in Computer Science<br>
+                  January 2018 - May 2020
+                </p>
+              </span>
+              
+            
+            </div>
+        </section>
+
+        <section id="third" class="main special">
+            <div class="content">
+              <header class="major">
+                <h2>Experience</h2>
+              </header>
+              <span>
+                <h4>
+                  <a href="https://vt.edu/" target="_blank">Virginia Tech</a>
+                </h4>
+                <p>
+                  Graduate Teaching Assistant <br>
+                  Graduate Research Assistant 
+                </p>
+              </span>
+
+              <span>
+                <h4>
+                  <a href="https://target.com/" target="_blank">Target</a>
+                </h4>
+                <p>
+                  Software Engineering Intern
+                </p>
+              </span>
+            </div>
+        </section>
+
 
         <!-- Projects -->
-        <section id="first" class="main special">
+        <!-- <section id="first" class="main special">
           <header class="major">
             <h2>Publications</h2>
           </header>
@@ -91,12 +242,12 @@
               <a href="aicriminal.html" class="button">Learn More</a>
             </li>
           </ul>
-          <!-- <footer class="major">
+          <!--<footer class="major">
 					<ul class="actions special">
 						<li><a href="elements.html" class="button">Learn More</a></li>
 					</ul>
 				</footer> -->
-        </section>
+        <!-- </section> -->
 
         <!-- Second Section -->
         <!-- <section id="second" class="main special">
@@ -164,9 +315,7 @@
       </div>
 
       <!-- Footer -->
-      <footer id="footer">
-
-        <!-- Resume -->
+      <!-- <footer id="footer">
         <section>
           <h2>Mission & Goals</h2>
           <p>
@@ -196,7 +345,7 @@
             <dt>Phone</dt>
             <dd>(651) 348-9438</dd>
             <dt>Email</dt>
-            <dd><a href="mailto:ktngn@yahoo.com">ktngn@yahoo.com</a></dd>
+            <dd><a href="mailto:tiennguyen@vt.edu">tiennguyen@vt.edu</a></dd>
           </dl>
           <ul class="icons">
             <li>
@@ -219,17 +368,16 @@
               <a
                 href="mailto:tiennguyen@vt.edu"
                 target="_blank"
-                class="icon brands fa-envelope alt"
+                class="icon free fa-envelope alt"
                 ><span class="label">Mail</span></a
               >
             </li>
-            <!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
           </ul>
         </section>
         <p class="copyright">
           Copyright &copy; 2024 Tien Nguyen. All Rights Reserved.
         </p>
-      </footer>
+      </footer> -->
     </div>
 
     <!-- Scripts -->
