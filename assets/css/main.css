@@ -2636,8 +2636,16 @@ input, select, textarea {
 
 /* Section/Article */
 
+	#second.special h4{
+		color: #861F41;
+	}
+
+	#second.special h4:hover{
+		font-weight: 400;	
+	}
+
 	section.special, article.special {
-		text-align: center;
+		text-align: left;    /* Change this to 'center' or 'right' to align the content */  
 	}
 
 	section.special h4 {
@@ -2668,7 +2676,7 @@ input, select, textarea {
 			}
 
 				section.special header.major h2:after, article.special header.major h2:after {
-					margin-left: auto;
+					/* margin-left: auto; */    /* Uncomment this to make it centered */
 					margin-right: auto;
 				}
 
@@ -3298,6 +3306,50 @@ input, select, textarea {
 			-ms-transform: scale(0.8) rotate(-30deg);
 			transform: scale(0.8) rotate(-30deg);
 		}
+
+/* Sections */
+
+/* General Styles */
+.flex-container {
+	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	margin-bottom: 2em;
+  }
+  
+  .full-width-text {
+	width: 100%; /* Spans the entire line */
+	text-align: left; /* Align text to the left */
+	/* margin-bottom: 8px; Add space below for readability */
+  }
+  
+  .flex-row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .left-text {
+	text-align: left;
+  }
+  
+  .right-text {
+	text-align: right;
+  }
+  
+  /* Styles for Mobile Screens */
+  @media (max-width: 768px) {
+	.flex-row {
+	  flex-direction: column; /* Stack items vertically */
+	  align-items: flex-start; /* Align all items to the left */
+	}
+  
+	.right-text {
+	  /* margin-top: 8px; Add spacing between texts */
+	  text-align: left; /* Align to the left for mobile readability */
+	}
+  }
+  
+
 
 /* Nav */
 
