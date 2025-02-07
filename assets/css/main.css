@@ -2658,6 +2658,16 @@ input, select, textarea {
 		font-weight: 600;
 	}
 
+	section.special h4 {
+		font-weight: 400;
+		margin: 0;
+	}
+
+	section.special h4:hover {
+		/* text-decoration: underline; */
+		font-weight: 600;
+	}
+
 	header.major {
 		margin-bottom: 3em;
 	}
